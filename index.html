@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script async src="Magic.js"></script>
+    <title>To Do App</title>
+</head>
+<body>
+
+<div id="splash-screen">
+
+</div>
+<div class="grid-container">
+
+<!-- Start of Page Header -->
+    <div id="header" class="header">
+       What To Do?
+        <div><button id="options">Settings</button> </div>
+    </div>
+    
+    <div>
+        <ul id="options-menu">
+            <div class="box"><li id="account-details">Account Details</li></div>
+            <div class="box"><li id="sign-out">Sign Out</li></div> 
+        </ul>
+    </div>
+<!-- End of Page Header -->
+
+<!--Start of Register -->
+    <div id="registration" class="registration">
+        <button class="button" id="sign-up">Sign Up</button>
+        <button class="button" id="log-in">Log In</button>
+    </div>
+<!-- End Of Register-->
+
+<!-- Descripton -->
+    <div class="description">
+        <wrap>Welcome to the last to do app you'll ever need. Planning your days just got easier for you and your friends </wrap>
+    </div>
+<!-- End of description -->
+        
+<!-- Account Settings -->
+
+<!-- End of Account Settings -->
+<!-- Sign Up Form -->
+    <div>
+            <fieldset  id="sign-up-form" class="form">
+            <legend id="sign-up">Sign Up</legend>
+
+            <label for="sign-up-name">First Name</label>
+            <input 
+                    type="text"
+                    name="sign-up-name"
+                    id="sign-up-name"
+                    placeholder="Name"/>
+                <br>
+            <br>
+            <label for="sign-up-last-name">Last Name</label>
+            <input 
+                    type="text"
+                    name="sign-up-last-name"
+                    id="sign-up-last-name"
+                    placeholder="Surname"/>
+            <br>
+            <br>
+            <label for="sign-up-email">Email Adress</label>
+            <input 
+                    type="text"
+                    name="sign-up-email"
+                    id="sign-up-email"
+                    placeholder="example@example.com"/>
+            <br>
+            <br>
+            <label for="sign-up-password">Password</label>
+            <input 
+                    type="password"
+                    name="sign-up-password"
+                    id="sign-up-password"
+                    placeholder="Enter your password"/>
+            <br>
+            <br>
+            <label for="terms-conditions">I agree to the terms and conditions</label>
+            <input 
+                type="checkbox" 
+                name="terms-conditions" 
+                id="terms-conditions"/>
+            <br>
+            <br>
+            <p id="error-message"></p>
+            <button id="sign-up-done">Done</button>
+        </fieldset>
+    </div>
+<!-- End of Sign up form -->
+
+<!-- Log in form -->
+    <div >
+        <fieldset id="log-in-form" class="form">
+            <legend>Log In</legend>
+
+            <label for="log-in-email">Email Adress</label>
+            <input 
+                type="text" 
+                name="log-in-email"
+                id="log-in-email"/>
+            <br>
+            <br>
+            <label for="log-in-password">Password</label>
+            <input 
+                type="password" 
+                name="log-in-password" 
+                id="log-in-password">
+            <br>
+            <br>
+            <p id="login-error-message"></p>
+            <button id="log-in-done">Done</button>
+        </fieldset>
+    </div>
+<!-- End of log in form -->
+
+<!-- The user dashboard -->
+
+    <div id="dashboard">
+
+        <div id="task-container">
+            <h3>My Tasks</h3>
+            <ul id="my-tasks">
+            </ul>
+                   
+            <input type="text"
+            name="task-creator"
+            id="task-creator"/>
+            <button id="task-creator-button">Create New List</button>
+        </div>
+
+        <div id="display-card">
+            <h3 id="active-task">Active Task</h3>
+            <ul id="task-items">             
+            </ul>
+
+            <input 
+            type="text"
+            id="list-item"/>
+            <button id="add-list-item">+</button>
+        </div>
+    </div>
+<!-- End of the user dashboard -->
+
+<!-- Account details Form -->
+<div>
+    <fieldset  id="account-details-form" class="form">
+    <legend id="account-details">Account Details</legend>
+
+    <label for="account-name">First Name</label>
+    <input 
+            type="text"
+            name="account-name"
+            id="account-name"
+            placeholder="Name"/>
+        <br>
+    <br>
+    <label for="account-last-name">Last Name</label>
+    <input 
+            type="text"
+            name="account-last-name"
+            id="account-last-name"
+            placeholder="Surname"/>
+    <br>
+    <br>
+    <label for="account-email">Email Adress</label>
+    <input 
+            type="text"
+            name="account-email"
+            id="account-email"
+            placeholder="example@example.com"/>
+    <br>
+    <br>
+    <label for="account-password">Old Password</label>
+    <input 
+            type="password"
+            name="account-password"
+            id="account-password"
+            placeholder="Enter your old password"/>
+    <br>
+    <br>
+    <label for="new-account-password">New Password</label>
+    <input 
+            type="password"
+            name="new-account-password"
+            id="new-account-password"
+            placeholder="Enter your new password"/>
+    <br>
+    <br>
+    <label for="account-conditions">I agree to the terms and conditions</label>
+    <input 
+        type="checkbox" 
+        name="account-conditions" 
+        id="account-conditions"/>
+    <br>
+    <br>
+    <p id="account-details-error"></p>
+    <button id="account-edit-done" onclick="updateAccountDetails()">Done</button>
+</fieldset>
+</div>
+<!-- End of Account details up form -->
+
+    </div>
+<!-- End of grid container -->
+        
+</body>
+</html>
